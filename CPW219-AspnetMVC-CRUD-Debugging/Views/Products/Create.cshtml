@@ -1,11 +1,9 @@
 ﻿@model Product
 @{
-    ViewData["Title"] = "Product";
+    ViewData["Title"] = "Create";
 }
 
 <h1>Create</h1>
-<p>Testing lorem ipsum mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm</p>
-
 
 <h4>Product</h4>
 <hr />
@@ -13,6 +11,7 @@
     <div class="col-md-4">
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="ProductId" />
             <div class="form-group">
                 <label asp-for="Name" class="control-label"></label>
                 <input asp-for="Name" class="form-control" />
