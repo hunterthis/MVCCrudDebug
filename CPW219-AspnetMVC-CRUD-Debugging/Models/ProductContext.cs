@@ -9,6 +9,6 @@ namespace CPW219_AspnetMVC_CRUD_Debugging.Models
         {
 
         }
-        public DbSet<Product> Product { get; set; }
+        public DbSet<Product>? Product { get; set; }
     }
 }
