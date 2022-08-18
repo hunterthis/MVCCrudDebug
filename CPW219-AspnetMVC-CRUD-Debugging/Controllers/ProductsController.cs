@@ -19,7 +19,7 @@ namespace CPW219_AspnetMVC_CRUD_Debugging.Controllers
                                            select product).ToListAsync();
             return View(products);
         }
-
+        [HttpGet]
         public IActionResult Create()
         {
             return View();
@@ -29,8 +29,9 @@ namespace CPW219_AspnetMVC_CRUD_Debugging.Controllers
         public async Task<IActionResult> Create(Product product)
         {
             if (ModelState.IsValid)
-            {
+            {               
                 await _context.AddAsync(product);
+                _context.SaveChanges();
                 return RedirectToAction(nameof(Index));
             }
             return View(product);
