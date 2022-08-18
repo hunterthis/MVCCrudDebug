@@ -4,6 +4,6 @@ namespace CPW219_AspnetMVC_CRUD_Debugging.Models
     {
         public string? RequestId { get; set; }
 
-        public bool ShowRequestId => !string.IsNullOrEmpty(RequestId);
+        public bool? ShowRequestId => !string.IsNullOrEmpty(RequestId);
     }
 }
